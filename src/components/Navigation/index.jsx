@@ -1,11 +1,11 @@
 import React from 'react';
 import style from "./index.module.css";
-import Tabs from './Tabs';
+import TabsComponent from './Tabs';
 
 const Navigation = () => {
   return (
     <nav className={style.links}>
-      <Tabs />
+      <TabsComponent />
     </nav>
   )
 };

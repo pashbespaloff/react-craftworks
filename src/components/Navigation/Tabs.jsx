@@ -16,9 +16,9 @@ const Tabs = () => {
     setActiveTab(updatedState);
   };
 
-  // const shitToExport = toPascalCase(tabs.find(e => e.isActive === true).name);
+  const getActiveSection = toPascalCase(tabs.find(section => section.isActive === true).name);
 
-  return (
+  const TabsComponent = (
     <ul>
       {
         tabs.map(tab => (
@@ -33,7 +33,9 @@ const Tabs = () => {
         ))
       }
     </ul>
-  )
+  );
+
+  return [getActiveSection, TabsComponent];
 };
 
 export default Tabs;
