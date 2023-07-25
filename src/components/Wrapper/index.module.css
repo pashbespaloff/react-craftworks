@@ -3,7 +3,7 @@
   margin-inline: auto;
   display: flex;
   justify-content: center;
-  width: 80%;
-  /* height: 50px; */
-  background-color: blue;
+  width: 100%;
+  /* font-size: 1rem; */
+  /* background-color: blue; */
 }

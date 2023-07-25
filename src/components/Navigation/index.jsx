@@ -1,11 +1,25 @@
 import React from 'react';
 import style from "./index.module.css";
-import TabsComponent from './Tabs';
+import sections from './tabs';
+import toKebabCase from '../helpers/toKebabCase';
 
-const Navigation = () => {
+const Navigation = ({ activeTabId, tabFunction }) => {
   return (
-    <nav className={style.links}>
-      <TabsComponent />
+    <nav className={style.links}> 
+      <ul>
+        {
+          sections.map(tab => (
+            <li 
+              key={toKebabCase(tab.name)}
+              id={tab.id}
+              className={tab.id === activeTabId && style.active}
+              onClick={tabFunction}
+            >
+              {tab.name}
+            </li>
+          ))
+        }
+      </ul>
     </nav>
   )
 };

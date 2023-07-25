@@ -1,6 +1,5 @@
 .links {
-  margin-block: 2rem .5rem;
-  margin-inline: 1rem;
+  margin-block: 1.5rem 1rem;
 }
 
 .links ul {
@@ -25,7 +24,7 @@
 .links li:hover::after {
   content: "→";
   position: absolute;
-  transform: translateX(0.75rem);
+  transform: translate(0.85rem, -0.05rem);
 }
 
 .links li.active {
@@ -37,12 +36,5 @@
 .links li.active::after {
   content: "↓";
   position: absolute;
-  transform: translateX(1.2rem);
-}
-
-@media screen and (max-width: 991px) {
-  .links {
-    margin-top: 1rem;
-    flex-direction: column;
-  }
+  transform: translate(1.2rem, -0.1rem);
 }
