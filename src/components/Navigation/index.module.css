@@ -1,0 +1,48 @@
+.links {
+  margin-block: 2rem .5rem;
+  margin-inline: 1rem;
+}
+
+.links ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+.links li {
+  padding-right: 3.25rem;
+  background-color: var(--gray);
+}
+
+.links li:hover {
+  background-color: var(--red);
+  cursor: pointer;
+}
+
+.links li:hover::after {
+  content: "→";
+  position: absolute;
+  transform: translateX(0.75rem);
+}
+
+.links li.active {
+  color: var(--black);
+  background-color: var(--white);
+  cursor: default;
+}
+
+.links li.active::after {
+  content: "↓";
+  position: absolute;
+  transform: translateX(1.2rem);
+}
+
+@media screen and (max-width: 991px) {
+  .links {
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+}
