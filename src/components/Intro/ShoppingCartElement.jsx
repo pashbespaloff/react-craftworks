@@ -3,6 +3,7 @@ import style from "./Cart.module.css";
 
 const ShoppingCartElement = ({ element, plus, minus }) => {
   return (
+    (element.count > 0) &&
     <li>
       <p>{element.name} (<span className={style.count}>{element.count}</span>)</p>
       <div className={style.buttons} id={element.id}>

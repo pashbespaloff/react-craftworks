@@ -12,7 +12,7 @@ const Navigation = ({ activeTabId, tabFunction }) => {
             <li 
               key={toKebabCase(tab.name)}
               id={tab.id}
-              className={tab.id === activeTabId && style.active}
+              className={tab.id === Number(activeTabId) && style.active}
               onClick={tabFunction}
             >
               {tab.name}

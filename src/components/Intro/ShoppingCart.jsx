@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import initialProducts from './initialProducts';
 import ShoppingCartElement from './ShoppingCartElement';
+import style from "./Cart.module.css";
 
 const ShoppingCart = () => {
   const [products, setProductCount] = useState(initialProducts);
@@ -9,7 +10,7 @@ const ShoppingCart = () => {
   const updatedState = (e, sign) => {
     return products.map(product => 
       (product.id === getParentId(e)) 
-        ? {...product, count : (sign === "+") ? product.count + 1 : (product.count > 0) ? product.count - 1 : 0} 
+        ? {...product, count : (sign === "+") ? product.count + 1 : product.count - 1}
         : product
     );
   };
@@ -17,14 +18,16 @@ const ShoppingCart = () => {
   return (
     <ul>
       {
-        products.map(product => (
-          <ShoppingCartElement 
-            key={product.id} 
-            element={product}
-            plus={(e) => setProductCount(updatedState(e, "+"))}
-            minus={(e) => setProductCount(updatedState(e, "-"))}
-          />
-        ))
+        (products.some(product => product.count > 0))
+          ? products.map(product => (
+            <ShoppingCartElement 
+              key={product.id}
+              element={product}
+              plus={(e) => setProductCount(updatedState(e, "+"))}
+              minus={(e) => setProductCount(updatedState(e, "-"))}
+            />
+          ))
+          : <p className={style.empty}>the cart is empty...</p>
       }
     </ul>
   )

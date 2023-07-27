@@ -30,6 +30,11 @@
   line-height: 2rem;
 }
 
+.cart .empty {
+  width: 100%;
+  text-align: center;
+}
+
 .cart .count {
   font-weight: 600;
 }
