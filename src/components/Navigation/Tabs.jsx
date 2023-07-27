@@ -1,21 +1,21 @@
 const tabs = [
   { 
-    id: "0", name: "intro"
+    id: 0, name: "intro"
   }, 
   {
-    id: "1", name: "state"
+    id: 1, name: "state"
   }, 
   {
-    id: "2", name: "reducer & context"
+    id: 2, name: "reducer & context"
   }, 
   {
-    id: "3", name: "refs"
+    id: 3, name: "refs"
   }, 
   {
-    id: "4", name: "effect"
+    id: 4, name: "effect"
   }, 
   {
-    id: "5", name: "routing"
+    id: 5, name: "routing"
   }
 ];
 

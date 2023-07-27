@@ -1,12 +1,22 @@
+.links,
+.links ul,
+.links li {
+  background-color: transparent;
+}
+
 .links {
-  margin-block: 1.5rem 1rem;
+  position: fixed;
+  top: 2rem;
+  z-index: 666;
+  width: inherit;
+  max-width: inherit;
 }
 
 .links ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
+  margin-inline: auto;
+  width: fit-content;
   font-size: 1.5rem;
   list-style: none;
 }
@@ -22,7 +32,7 @@
 }
 
 .links li:hover::after {
-  content: "→";
+  content: "←";
   position: absolute;
   transform: translate(0.85rem, -0.05rem);
 }

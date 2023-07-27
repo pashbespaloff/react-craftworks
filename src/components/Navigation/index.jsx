@@ -1,7 +1,7 @@
 import React from 'react';
-import style from "./index.module.css";
 import sections from './tabs';
 import toKebabCase from '../helpers/toKebabCase';
+import style from "./index.module.css";
 
 const Navigation = ({ activeTabId, tabFunction }) => {
   return (

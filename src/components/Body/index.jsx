@@ -6,9 +6,7 @@ const Body = ({ children }) => {
   return (
     <div className={style.body}>
       <main className={style.main}>
-        <div className={style.main__container}>
-          {children}
-        </div>  
+        {children}
       </main>
     </div>
   )

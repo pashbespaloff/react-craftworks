@@ -4,12 +4,14 @@
   --max-width: 1200px;
   --black: #060606;
   --white: #FBFBFB;
+  --white-bg: #fbfbfb11;
   --gray: #48494B;
   --red: #D40D0C;
 }
 
 html {
   background: var(--black);
+  overflow: hidden;
 }
 
 .body {
@@ -38,14 +40,11 @@ input:focus {
 
 .main {
   display: flex;
+  margin-block: 6rem 0;
   margin-inline: auto;
   width: 80%;
   max-width: var(--max-width);
   background: var(--black);
-}
-
-.main {
-  margin-block: 4rem 0;
 }
 
 .main__container {
@@ -55,11 +54,22 @@ input:focus {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  overflow: scroll;
+}
+
+.wrapper {
+  margin-block: 2rem 0;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .heading {
   position: relative;
   z-index: 1;
+  margin-inline: auto;
+  width: fit-content;
   font-size: 2rem;
   font-weight: 300;
   text-align: center;
@@ -76,8 +86,14 @@ input:focus {
   transform: translateY(2rem);
 }
 
+.subheading {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+}
+
 @media screen and (max-width: 991px) {
   .main {
-    margin-top: 3rem;
+    margin-block-start: 9rem;
   }
 }
