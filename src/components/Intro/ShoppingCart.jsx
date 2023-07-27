@@ -27,7 +27,7 @@ const ShoppingCart = () => {
               minus={(e) => setProductCount(updatedState(e, "-"))}
             />
           ))
-          : <p className={style.empty}>the cart is empty...</p>
+          : <li><p className={style.empty}>the cart is empty...</p></li>
       }
     </ul>
   )

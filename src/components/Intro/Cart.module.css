@@ -31,6 +31,7 @@
 }
 
 .cart .empty {
+  margin: 0;
   width: 100%;
   text-align: center;
 }
@@ -52,7 +53,7 @@
 }
 
 @media screen and (max-width: 991px) {
-  .cart p {
+  .cart p:not(.empty) {
     max-width: 8rem;
   }
 }
