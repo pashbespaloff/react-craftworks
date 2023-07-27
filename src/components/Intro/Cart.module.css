@@ -1,9 +1,6 @@
 .cart {
-  margin-block-end: 8rem;
-}
-
-.cart h1 {
-  margin-block-start: 4rem;
+  margin-block: 20rem;
+  scroll-snap-align: start;
 }
 
 .cart ul {
@@ -11,7 +8,7 @@
   padding-block: 1rem;
   background-color: var(--white-bg);
   backdrop-filter: blur(15px);
-  border: 3px solid var(--white);
+  border: var(--default-border);
 }
 
 .cart ul li {
@@ -30,26 +27,28 @@
   line-height: 2rem;
 }
 
-.cart .empty {
-  margin: 0;
-  width: 100%;
-  text-align: center;
-}
-
 .cart .count {
   font-weight: 600;
 }
 
 .cart .buttons {
   display: flex;
-  gap: .5rem;
+  gap: .75rem;
 }
 
 .cart .plus,
 .cart .minus {
+  padding-block-end: 3px;
   width: 2rem;
   height: 2rem;
+  font-weight: 600;
   border-radius: 50px;
+}
+
+.cart .empty {
+  margin: 0;
+  width: 100%;
+  text-align: center;
 }
 
 @media screen and (max-width: 991px) {

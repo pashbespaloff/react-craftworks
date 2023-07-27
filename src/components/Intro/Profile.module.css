@@ -1,8 +1,11 @@
 .gallery {
   display: grid;
+  padding-block-start: 6rem;
+  margin-block-end: 10rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   column-gap: 2rem;
+  scroll-snap-align: start;
 }
 
 .gallery h1 {
@@ -18,7 +21,7 @@
   flex-direction: column;
   background-color: var(--white-bg);
   backdrop-filter: blur(15px);
-  border: 3px solid var(--white);
+  border: var(--default-border);
 }
 
 .profile img {
@@ -42,6 +45,8 @@
 
 @media screen and (max-width: 991px) {
   .gallery {
+    padding-block-start: 2rem;
+    margin-block-end: 5rem;
     grid-template-columns: 300px;
   }
 

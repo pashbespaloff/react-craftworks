@@ -1,6 +1,7 @@
 :root {
   --default-font-size: 20px;
   --default-letter-spacing: -0.015em;
+  --default-border: 3px solid var(--white);
   --max-width: 1200px;
   --black: #060606;
   --white: #FBFBFB;
@@ -55,12 +56,12 @@ input:focus {
   background-position: center;
   background-size: cover;
   overflow: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 .wrapper {
-  margin-block: 2rem 0;
-  margin-inline: auto;
   display: flex;
+  margin-inline: auto;
   justify-content: center;
   width: 100%;
 }
@@ -95,5 +96,9 @@ input:focus {
 @media screen and (max-width: 991px) {
   .main {
     margin-block-start: 9rem;
+  }
+
+  .main__container {
+    scroll-snap-type: y proximity;
   }
 }
