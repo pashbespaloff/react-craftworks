@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-craftworks/static/css/main.7105497d.css",
-    "main.js": "/react-craftworks/static/js/main.a900b5e4.js",
+    "main.css": "/react-craftworks/static/css/main.c3a655b4.css",
+    "main.js": "/react-craftworks/static/js/main.a2e5eaa5.js",
     "static/media/wheat.jpg": "/react-craftworks/static/media/wheat.a7d91a56f3e46547f2c9.jpg",
     "index.html": "/react-craftworks/index.html",
-    "main.7105497d.css.map": "/react-craftworks/static/css/main.7105497d.css.map",
-    "main.a900b5e4.js.map": "/react-craftworks/static/js/main.a900b5e4.js.map"
+    "main.c3a655b4.css.map": "/react-craftworks/static/css/main.c3a655b4.css.map",
+    "main.a2e5eaa5.js.map": "/react-craftworks/static/js/main.a2e5eaa5.js.map"
   },
   "entrypoints": [
-    "static/css/main.7105497d.css",
-    "static/js/main.a900b5e4.js"
+    "static/css/main.c3a655b4.css",
+    "static/js/main.a2e5eaa5.js"
   ]
 }
