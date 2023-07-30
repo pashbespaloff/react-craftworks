@@ -10,12 +10,12 @@ const Navigation = ({ activeTabId, tabFunction }) => {
         {
           sections.map(tab => (
             <li 
-              key={toKebabCase(tab.name)}
+              key={toKebabCase(tab.title)}
               id={tab.id}
               className={tab.id === Number(activeTabId) && style.active}
               onClick={tabFunction}
             >
-              {tab.name}
+              {tab.title}
             </li>
           ))
         }

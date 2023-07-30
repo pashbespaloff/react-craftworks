@@ -1,7 +1,6 @@
 import React from 'react';
 import H1 from '../helpers/Heading';
-import Profile from './Profile';
-import persons from './persons';
+import Gallery from './Gallery';
 import ShoppingCart from './ShoppingCart';
 import galleryStyle from "./Profile.module.css";
 import cartStyle from "./Cart.module.css";
@@ -11,11 +10,7 @@ const Intro = () => {
     <>
       <div className={galleryStyle.gallery}>
         <H1 text="profiles gallery"/>
-          {
-            persons.map(person => (
-              <Profile key={person.name} person={person}/>
-            ))
-          }
+        <Gallery />
       </div>
 
       <div className={cartStyle.cart}>

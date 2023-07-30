@@ -24,7 +24,7 @@ const persons = [
   },
   {
     // name: "Katsuko Saruhashi",
-    photoSource: "https://i.imgur.com/YfeOqp2s.jpg",
+    // photoSource: "https://i.imgur.com/YfeOqp2s.jpg",
     // profession: "geochemist",
     // awards: [
     //   "Miyake Prize for geochemistry",
