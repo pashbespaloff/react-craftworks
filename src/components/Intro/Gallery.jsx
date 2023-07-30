@@ -8,7 +8,7 @@ const Gallery = () => {
     <>
       {
         persons.map(person => (
-          <Profile key={person.name} person={person}/>
+          <Profile key={persons.indexOf(person)} person={person}/>
         ))
       }
     </>

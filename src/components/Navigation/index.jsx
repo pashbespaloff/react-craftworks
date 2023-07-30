@@ -11,7 +11,7 @@ const Navigation = ({ activeTabId, setActiveTab }) => {
             <li 
               key={tab.id}
               id={tab.id}
-              className={tab.id === Number(activeTabId) && style.active}
+              className={tab.id === Number(activeTabId) ? style.active : null}
               onClick={() => setActiveTab(tab.id)}
             >
               {tab.title}
