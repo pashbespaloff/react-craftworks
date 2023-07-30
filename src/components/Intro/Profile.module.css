@@ -41,8 +41,26 @@
   margin-bottom: 1rem;
 }
 
+.profile ul li {
+  line-height: 1.5;
+}
+
 .profile ul span {
+  position: relative;
+  z-index: 1;
   font-weight: 600;
+  width: fit-content;
+}
+
+.profile ul span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: calc(100% - 1ch);
+  height: .1rem;
+  backdrop-filter: invert(1);
+  transform: translateY(1.5rem);
 }
 
 @media screen and (max-width: 991px) {
