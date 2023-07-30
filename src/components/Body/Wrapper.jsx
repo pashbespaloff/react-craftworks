@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Navigation from '../Navigation';
 import Content from '../Content';
 import tabs from '../Navigation/tabs';
-import style from "../Body/index.module.css";
+import style from "./Body.module.css";
 
 const Wrapper = () => {
   const [activeTabId, setActiveTabId] = useState(tabs[0].id);
@@ -12,7 +12,7 @@ const Wrapper = () => {
     <>
       <Navigation 
         activeTabId={activeTabId}
-        setActiveTab={(id) => setActiveTabId(id)}
+        setActiveTab={setActiveTabId}
       />
       <div className={style.main__container}>
         <div className={style.wrapper}>

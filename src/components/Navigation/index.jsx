@@ -1,6 +1,6 @@
 import React from 'react';
 import sections from './tabs';
-import style from "./index.module.css";
+import style from "./Navigation.module.css";
 
 const Navigation = ({ activeTabId, setActiveTab }) => {
   return (

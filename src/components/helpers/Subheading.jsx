@@ -1,5 +1,5 @@
-import style from "../Body/index.module.css";
+import style from "../Body/Body.module.css";
 
-const H2 = ({ text }) => (<h2 className={style.subheading}>{text}</h2>);
+const H2 = ({ children }) => (<h2 className={style.subheading}>{children}</h2>);
 
 export default H2;

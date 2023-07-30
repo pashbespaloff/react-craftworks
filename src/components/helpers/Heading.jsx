@@ -1,5 +1,5 @@
-import style from "../Body/index.module.css";
+import style from "../Body/Body.module.css";
 
-const H1 = ({ text }) => (<h1 className={style.heading}>{text}</h1>);
+const H1 = ({ children }) => (<h1 className={style.heading}>{children}</h1>);
 
 export default H1;

@@ -7,7 +7,7 @@ const Profile = ({ person }) => {
   
   if (person.name) return (
     <article className={style.profile}>
-      <H2 text={person.name} />
+      <H2>{person.name}</H2>
       <img src={person.photoSource ? person.photoSource : defaultUserPhoto} alt={person.name} />
 
       <ul>

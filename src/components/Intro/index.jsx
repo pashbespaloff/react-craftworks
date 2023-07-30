@@ -9,12 +9,12 @@ const Intro = () => {
   return (
     <>
       <div className={galleryStyle.gallery}>
-        <H1 text="profiles gallery"/>
+        <H1>profiles gallery</H1>
         <Gallery />
       </div>
 
       <div className={cartStyle.cart}>
-        <H1 text="shopping cart"/>
+        <H1>shopping cart</H1>
         <ShoppingCart />
       </div>
     </>

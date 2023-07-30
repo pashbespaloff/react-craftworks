@@ -44,6 +44,10 @@
   border-radius: 50px;
 }
 
+.cart button:hover {
+  opacity: 0.8;
+}
+
 .cart .empty {
   margin: 0;
   width: 100%;
