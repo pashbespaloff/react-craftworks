@@ -12,7 +12,7 @@ const Wrapper = () => {
     <>
       <Navigation 
         activeTabId={activeTabId}
-        tabFunction={(e) => setActiveTabId(e.target.id)}
+        setActiveTab={(id) => setActiveTabId(id)}
       />
       <div className={style.main__container}>
         <div className={style.wrapper}>
