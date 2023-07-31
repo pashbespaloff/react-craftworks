@@ -1,7 +1,7 @@
 import React from 'react';
 import style from "./Cart.module.css";
 
-const ShoppingItem = ({ item, plus, minus }) => {
+export default function ShoppingItem({ item, plus, minus }) {
   return (
     (item.count > 0) && (
       <li>
@@ -13,6 +13,4 @@ const ShoppingItem = ({ item, plus, minus }) => {
       </li>
     )
   )
-};
-
-export default ShoppingItem;
+}

@@ -3,7 +3,7 @@ import initialProducts from './initialProducts';
 import ShoppingItem from './ShoppingItem';
 import style from "./Cart.module.css";
 
-const ShoppingCart = () => {
+export default function ShoppingCart() {
   const [products, setProductCount] = useState(initialProducts);
   
   const updatedState = (id, sign) => {
@@ -31,5 +31,3 @@ const ShoppingCart = () => {
     </ul>
   )
 };
-
-export default ShoppingCart;

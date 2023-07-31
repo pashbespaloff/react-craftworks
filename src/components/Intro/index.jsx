@@ -5,7 +5,7 @@ import ShoppingCart from './ShoppingCart';
 import galleryStyle from "./Profile.module.css";
 import cartStyle from "./Cart.module.css";
 
-const Intro = () => {
+export default function Intro () {
   return (
     <>
       <div className={galleryStyle.gallery}>
@@ -20,5 +20,3 @@ const Intro = () => {
     </>
   )
 };
-
-export default Intro;

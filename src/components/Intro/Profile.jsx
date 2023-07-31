@@ -2,7 +2,7 @@ import React from 'react';
 import style from "./Profile.module.css";
 import H2 from "../helpers/Subheading";
 
-const Profile = ({ person }) => {
+export default function Profile({ person }) {
   const defaultUserPhoto = "https://i.imgur.com/lb1E2CM.jpeg";
   
   if (person.name) return (
@@ -24,5 +24,3 @@ const Profile = ({ person }) => {
     </article>
   )
 };
-
-export default Profile;

@@ -2,8 +2,7 @@ import React from 'react';
 import Profile from './Profile';
 import persons from './persons';
 
-const Gallery = () => {
-  
+export default function Gallery() {
   return (
     <>
       {
@@ -14,5 +13,3 @@ const Gallery = () => {
     </>
   )
 };
-
-export default Gallery;

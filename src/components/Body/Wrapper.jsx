@@ -4,7 +4,7 @@ import Content from '../Content';
 import tabs from '../Navigation/tabs';
 import style from "./Body.module.css";
 
-const Wrapper = () => {
+export default function Wrapper() {
   const [activeTabId, setActiveTabId] = useState(tabs[0].id);
   const activeTabTitle = tabs.find(tab => tab.id === Number(activeTabId)).title;
 
@@ -22,5 +22,3 @@ const Wrapper = () => {
     </>
   );
 };
-
-export default Wrapper;

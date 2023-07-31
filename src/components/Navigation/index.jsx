@@ -2,7 +2,7 @@ import React from 'react';
 import sections from './tabs';
 import style from "./Navigation.module.css";
 
-const Navigation = ({ activeTabId, setActiveTab }) => {
+export default function Navigation({ activeTabId, setActiveTab }) {
   return (
     <nav className={style.links}> 
       <ul>
@@ -22,5 +22,3 @@ const Navigation = ({ activeTabId, setActiveTab }) => {
     </nav>
   )
 };
-
-export default Navigation;
