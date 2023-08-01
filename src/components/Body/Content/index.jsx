@@ -1,7 +1,7 @@
 import React from 'react';
 import sections from './sections';
-import toKebabCase from '../helpers/toKebabCase';
-import toPascalCase from '../helpers/toPascalCase';
+import toKebabCase from '../../helpers/toKebabCase';
+import toPascalCase from '../../helpers/toPascalCase';
 
 export default function Content({ activeSection }) {
   return (

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import Navigation from '../Navigation';
-import Content from '../Content';
-import tabs from '../Navigation/tabs';
+import Navigation from './Navigation';
+import Content from './Content';
+import tabs from './Navigation/tabs';
 import style from "./Body.module.css";
 
 export default function Wrapper() {
