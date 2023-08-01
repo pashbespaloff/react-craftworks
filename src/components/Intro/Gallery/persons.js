@@ -1,7 +1,7 @@
 const persons = [
   {
     name: "Maria Skłodowska-Curie",
-    photoSource: "https://i.imgur.com/szV5sdGs.jpg",
+    photo: "https://i.imgur.com/szV5sdGs.jpg",
     profession: "falsephysicist and chemist",
     awards: [
       "Nobel Prize in Physics",
@@ -14,7 +14,7 @@ const persons = [
 
   {
     name: "Katsuko Saruhashi",
-    photoSource: "https://i.imgur.com/YfeOqp2s.jpg",
+    photo: "https://i.imgur.com/YfeOqp2s.jpg",
     profession: "geochemist",
     awards: [
       "Miyake Prize for geochemistry",
@@ -24,7 +24,7 @@ const persons = [
   },
   {
     // name: "Katsuko Saruhashi",
-    // photoSource: "https://i.imgur.com/YfeOqp2s.jpg",
+    // photo: "https://i.imgur.com/YfeOqp2s.jpg",
     // profession: "geochemist",
     // awards: [
     //   "Miyake Prize for geochemistry",

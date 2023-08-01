@@ -1,9 +1,9 @@
 import React from 'react';
-import H1 from '../helpers/Heading';
-import Gallery from './Gallery';
-import ShoppingCart from './ShoppingCart';
-import galleryStyle from "./Profile.module.css";
-import cartStyle from "./Cart.module.css";
+import H1 from "../../ui/Heading";
+import Gallery from './Gallery/Gallery';
+import ShoppingCart from './ShoppingCart/ShoppingCart';
+import galleryStyle from "./Gallery/Profile.module.css";
+import cartStyle from "./ShoppingCart/Cart.module.css";
 
 export default function Intro () {
   return (

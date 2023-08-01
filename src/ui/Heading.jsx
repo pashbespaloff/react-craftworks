@@ -1,4 +1,4 @@
-import style from "../Body/Body.module.css";
+import style from "../components/Body/Body.module.css";
 
 export default function H1({ children }) {
   return (

@@ -5,14 +5,14 @@ import tabs from '../Navigation/tabs';
 import style from "./Body.module.css";
 
 export default function Wrapper() {
-  const [activeTabId, setActiveTabId] = useState(tabs[0].id);
-  const activeTabTitle = tabs.find(tab => tab.id === Number(activeTabId)).title;
+  const [activeTab, setActiveTab] = useState(tabs[0].id);
+  const activeTabTitle = tabs.find(item => item.id === Number(activeTab)).title;
 
   return (
     <>
       <Navigation 
-        activeTabId={activeTabId}
-        setActiveTab={setActiveTabId}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
       />
       <div className={style.main__container}>
         <div className={style.wrapper}>

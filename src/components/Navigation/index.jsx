@@ -2,7 +2,7 @@ import React from 'react';
 import sections from './tabs';
 import style from "./Navigation.module.css";
 
-export default function Navigation({ activeTabId, setActiveTab }) {
+export default function Navigation({ activeTab, setActiveTab }) {
   return (
     <nav className={style.links}> 
       <ul>
@@ -11,7 +11,7 @@ export default function Navigation({ activeTabId, setActiveTab }) {
             <li 
               key={tab.id}
               id={tab.id}
-              className={tab.id === Number(activeTabId) ? style.active : null}
+              className={tab.id === Number(activeTab) ? style.active : null}
               onClick={() => setActiveTab(tab.id)}
             >
               {tab.title}
