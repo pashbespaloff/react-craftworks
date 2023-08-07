@@ -6,7 +6,7 @@ import style from "./Body.module.css";
 
 export default function Wrapper() {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
-  const activeTabTitle = tabs.find(item => item.id === Number(activeTab)).title;
+  const activeTabTitle = tabs.find(tab => tab.id === Number(activeTab)).title;
 
   return (
     <>

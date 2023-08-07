@@ -1,0 +1,34 @@
+.togglebox {
+  padding-block-start: 6rem;
+  margin-block-end: 10rem;
+  padding-inline: 6rem;
+  width: 100%;
+  max-width: var(--max-width);
+  scroll-snap-align: start;
+}
+
+.background {
+  display: block;
+  margin-block: 3rem;
+  margin-inline: auto;
+  padding: 15%;
+  width: clamp(18rem, 40vw, 30rem);
+  border-radius: 3rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.background__active {
+  background-color: var(--red);
+}
+
+.img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  border: 5px solid transparent;
+}
+
+.img__active {
+  border-color: var(--black);
+}
