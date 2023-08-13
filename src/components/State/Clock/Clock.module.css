@@ -2,9 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-block: 20rem;
+  justify-content: center;
+  margin-block: 20rem 0;
   width: 100%;
   max-width: var(--max-width);
+  height: 80dvh;
   scroll-snap-align: start;
 }
 

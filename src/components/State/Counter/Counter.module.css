@@ -1,0 +1,76 @@
+.counterbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-block: 14rem 20rem;
+  width: 100%;
+  max-width: var(--max-width);
+  height: 80dvh;
+  scroll-snap-align: start;
+}
+
+.innerbox {
+  margin-block: 2rem;
+  margin-inline: auto;
+  width: 20rem;
+}
+
+.input,
+.result,
+.button {
+  overflow: hidden;
+}
+
+.input,
+.result {
+  width: 10rem;
+  height: 4rem;
+  text-align: center;
+  color: var(--white);
+  opacity: 1;
+}
+
+.input {
+  width: 10rem;
+  caret-color: var(--red) !important;
+  background-color: var(--white-bg);
+  backdrop-filter: blur(15px);
+  border: var(--default-border);
+}
+
+.input:first-child {
+  grid-area: input1;
+}
+
+.input:last-child {
+  grid-area: input2;
+}
+
+.countersetter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 1rem;
+  grid-template-areas: 
+    "text1 input1"
+    "text2 input2";
+  align-items: center;
+}
+
+.countersetter p:first-child {
+  grid-area: text1;
+}
+
+.countersetter p:last-child {
+  grid-area: text2;
+}
+
+.result {
+  width: 10rem;
+}
+
+.button {
+  width: 5rem;
+  height: 4rem;
+}
