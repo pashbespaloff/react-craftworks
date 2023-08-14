@@ -4,10 +4,12 @@ import ToggleBgImg from './ToggleBgImg';
 import Clock from './Clock';
 import Counter from './Counter';
 import PackingList from './PackingList';
+import SpriteJump from './SpriteJump';
 import toggleStyle from './ToggleBgImg/ToggleBgImg.module.css';
 import clockStyle from "./Clock/Clock.module.css";
 import counterStyle from "./Counter/Counter.module.css";
 import packingStyle from "./PackingList/PackingList.module.css";
+import jumpingStyle from "./SpriteJump/SpriteJump.module.css";
 
 export default function State() {
   return (
@@ -30,6 +32,11 @@ export default function State() {
       <div className={packingStyle.packingbox}>
         <H1>packing list</H1>
         <PackingList />
+      </div>
+
+      <div className={jumpingStyle.jumpbox}>
+        <H1>sprite jump</H1>
+        <SpriteJump />
       </div>
     </>
   );

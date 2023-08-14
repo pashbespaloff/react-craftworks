@@ -1,0 +1,66 @@
+.jumpbox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-block: 0 16rem;
+  width: 100%;
+  max-width: var(--max-width);
+  height: 80dvh;
+  scroll-snap-align: start;
+  overflow-y: hidden;
+}
+
+.jumpwrapper {
+  position: relative;
+  margin-inline: auto;
+  width: 30rem;
+  height: 30rem;
+}
+
+.jump {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20rem;
+  height: 26rem;
+  background: url(https://nolra.github.io/react_hw/static/media/jump.c0c4278daf8490784152.png) no-repeat;
+  transition: bottom,left .3s;
+}
+
+.slide0,
+.slide1,
+.slide2,
+.slide3,
+.slide4,
+.slide5 {
+  background-position-y: 0;
+}
+
+.slide0 {
+  background-position-x: 0;
+}
+  
+.slide1 {
+  background-position-x: -330px;
+}
+
+.slide2 {
+  background-position-x: -620px;
+}
+
+.slide3 {
+  background-position-x: -950px;
+  bottom: 100px;
+  left: 100px;
+}
+  
+.slide4 {
+  background-position-x: -1245px;
+  left: 100px;
+}
+
+.slide5 {
+  background-position-x: -1555px;
+  left: 100px;
+}
