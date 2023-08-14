@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import style from './SpriteJump.module.css';
 
 export default function SpriteJump() {
-  const [slide, setSlide] = useState(slides[5]);
+  const [slide, setSlide] = useState(slides[0]);
 
   const animateJump = (n) => {
     if (n === 5) return;
@@ -10,13 +10,11 @@ export default function SpriteJump() {
     setTimeout(() => {
       setSlide(slides[n + 1]);
       animateJump(n + 1);
-    }, 80);
-
-    
+    }, 100);
   };
 
   return (
-    <div className={style.jumpwrapper} onClick={() => animateJump(-1)}>
+    <div className={style.jumpwrapper} onClick={() => animateJump(0)}>
       <div className={`${style.jump} ${slide}`}>
       </div>
     </div>
