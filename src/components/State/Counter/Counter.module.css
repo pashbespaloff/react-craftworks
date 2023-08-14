@@ -11,9 +11,11 @@
 }
 
 .innerbox {
+  display: flex;
+  justify-content: center;
   margin-block: 2rem;
   margin-inline: auto;
-  width: 20rem;
+  width: 100%;
 }
 
 .input,
@@ -31,11 +33,17 @@
   opacity: 1;
 }
 
+.result {
+  width: 8rem;
+  background-color: var(--white-bg);
+  backdrop-filter: var(--default-blur);
+}
+
 .input {
-  width: 10rem;
+  width: 100%;
   caret-color: var(--red) !important;
   background-color: var(--white-bg);
-  backdrop-filter: blur(15px);
+  backdrop-filter: var(--default-blur);
   border: var(--default-border);
 }
 
@@ -49,13 +57,18 @@
 
 .countersetter {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 55% 45%;
   grid-template-rows: auto;
   grid-row-gap: 1rem;
   grid-template-areas: 
     "text1 input1"
     "text2 input2";
   align-items: center;
+  max-width: 16rem;
+}
+
+.countersetter p {
+  width: 100%;
 }
 
 .countersetter p:first-child {
@@ -66,11 +79,12 @@
   grid-area: text2;
 }
 
-.result {
-  width: 10rem;
-}
-
 .button {
   width: 5rem;
   height: 4rem;
+}
+
+.button:hover {
+  color: var(--white);
+  background-color: var(--red);
 }

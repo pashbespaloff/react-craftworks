@@ -3,10 +3,11 @@ import H1 from "../../ui/Heading";
 import ToggleBgImg from './ToggleBgImg';
 import Clock from './Clock';
 import Counter from './Counter';
-// import PackingList from './PackingList';
+import PackingList from './PackingList';
 import toggleStyle from './ToggleBgImg/ToggleBgImg.module.css';
 import clockStyle from "./Clock/Clock.module.css";
 import counterStyle from "./Counter/Counter.module.css";
+import packingStyle from "./PackingList/PackingList.module.css";
 
 export default function State() {
   return (
@@ -26,10 +27,10 @@ export default function State() {
         <Counter />
       </div>
 
-      {/* <div>
+      <div className={packingStyle.packingbox}>
         <H1>packing list</H1>
         <PackingList />
-      </div> */}
+      </div>
     </>
   );
 };

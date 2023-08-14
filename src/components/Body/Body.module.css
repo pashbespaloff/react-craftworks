@@ -2,6 +2,7 @@
   --default-font-size: 20px;
   --default-letter-spacing: -0.015em;
   --default-border: 3px solid var(--white);
+  --default-blur: blur(15px);
   --max-width: 1200px;
   --black: #060606;
   --white: #FBFBFB;
