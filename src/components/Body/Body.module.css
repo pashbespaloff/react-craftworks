@@ -52,12 +52,21 @@ input:focus {
 .main__container {
   width: var(--max-width);
   height: calc(var(--max-width) / 3 * 2);
-  background-image: url("./imgs/wheat.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   overflow: scroll;
   scroll-snap-type: y mandatory;
+  transition: background-image 2.51s ease-in-out;
+}
+
+.main__container.wheat {
+  background-image: url("./imgs/wheat.jpg");
+}
+
+.main__container.corn {
+  background-image: url("./imgs/corn.jpg");
+  filter: saturate(20%);
 }
 
 .wrapper {

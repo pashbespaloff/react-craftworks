@@ -27,6 +27,7 @@
   background-color: var(--white-bg);
   border: var(--default-border);
   backdrop-filter: var(--default-blur);
+  cursor: pointer;
 }
 
 .message {

@@ -3,7 +3,7 @@ import style from "./Chat.module.css";
 
 export default function SendMessageButton({activeUser, dispatch}) {
   const sendMessage = () => {
-    setTimeout(
+    activeUser.message !== "" && setTimeout(
       () => {
         alert(`you've just sent "${activeUser.message}" to ${activeUser.to}`);
         dispatch({
