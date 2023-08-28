@@ -3,12 +3,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-block: 0 16rem;
   width: 100%;
   max-width: var(--max-width);
   height: 80dvh;
   scroll-snap-align: start;
-  overflow-y: hidden;
 }
 
 .innerbox {

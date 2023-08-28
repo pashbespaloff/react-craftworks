@@ -1,8 +1,10 @@
 .togglebox {
-  padding-block-start: 6rem;
-  margin-block-end: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-inline: 6rem;
   width: 100%;
+  height: 80dvh;
   max-width: var(--max-width);
   scroll-snap-align: start;
 }

@@ -1,10 +1,14 @@
 .cart {
-  margin-block: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-block-end: 8rem;
+  height: 80dvh;
   scroll-snap-align: start;
 }
 
 .cart ul {
-  margin-block-start: 2rem;
+  margin-block: 2rem;
   padding-block: 1rem;
   background-color: var(--white-bg);
   backdrop-filter: var(--default-blur);

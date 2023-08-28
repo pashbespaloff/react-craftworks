@@ -1,0 +1,60 @@
+.chatbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: var(--max-width);
+  height: 80dvh;
+  scroll-snap-align: start;
+}
+
+.selector {
+  display: flex;
+  margin-block: 2rem;
+  height: 3rem;
+}
+
+.label {
+  width: 3rem;
+  line-height: 3rem;
+}
+
+.select {
+  padding-inline: .5rem;
+  width: 13rem;
+  color: var(--white);
+  background-color: var(--white-bg);
+  border: var(--default-border);
+  backdrop-filter: var(--default-blur);
+}
+
+.message {
+  width: 16rem;
+  margin-block-end: 2rem;
+  padding-block: .5rem;
+  padding-inline: .5rem;
+  height: 8rem;
+  font-family: inherit;
+  letter-spacing: inherit;
+  resize: none;
+  color: var(--white);
+  background-color: var(--white-bg);
+  caret-color: var(--red) !important;
+  border: var(--default-border);
+  backdrop-filter: var(--default-blur);
+}
+
+.message::selection {
+  background-color: var(--red);
+}
+
+.send {
+  width: 16rem;
+  height: 3rem;
+}
+
+.send:hover {
+  color: var(--white);
+  background-color: var(--red);
+}

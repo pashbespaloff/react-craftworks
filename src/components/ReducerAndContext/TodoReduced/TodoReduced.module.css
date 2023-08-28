@@ -1,0 +1,90 @@
+.todobox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: var(--max-width);
+  height: 80dvh;
+  scroll-snap-align: start;
+}
+
+.todo {
+  margin-block: 2rem;
+  width: 20rem;
+}
+
+.add {
+  margin-block: 0 2rem;
+}
+
+.add input {
+  padding-inline: .5rem;
+  width: 80%;
+}
+
+.add button {
+  width: 20%;
+}
+
+.todo ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.todo li {
+  display: grid;
+  grid-template-columns: 10% 60% 15% 15%;
+  grid-template-rows: 4rem;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.todo input, 
+.todo button {
+  margin-block: 0;
+  height: 3rem;
+}
+
+.todo input {
+  color: var(--white);
+  background-color: var(--white-bg);
+  caret-color: var(--red) !important;
+  border: var(--default-border);
+  backdrop-filter: var(--default-blur);
+}
+
+.todo input[type="checkbox"] {
+  height: 1rem;
+  accent-color: var(--red);
+}
+
+.todo button:hover {
+  color: var(--white);
+  background-color: var(--red);
+}
+
+.title {
+  position: relative;
+  width: 95%;
+  resize: none;
+  font-family: inherit;
+  letter-spacing: inherit;
+  color: var(--white);
+  background-color: transparent;
+  caret-color: var(--red) !important;
+}
+
+.title:focus {
+  background-color: var(--white-bg);
+}
+
+.add input::selection,
+.title::selection {
+  background-color: var(--red);
+}
+
+.todo input[type="checkbox"]:checked + .title {
+  text-decoration: line-through;
+}
