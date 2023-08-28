@@ -22,6 +22,10 @@
   border: var(--default-border);
 }
 
+.input::selection {
+  background-color: var(--red);
+}
+
 .clock {
   font-size: 5rem;
 }
