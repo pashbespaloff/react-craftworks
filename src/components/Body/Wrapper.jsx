@@ -9,8 +9,8 @@ export default function Wrapper() {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
   const activeTabTitle = tabs.find(tab => tab.id === Number(activeTab)).title;
 
-  const context = useContext(BackgroundContext);
-  const mainStyle = `${style.main__container} ${context.background === "wheat" ? style.wheat : style.corn}`;
+  const {background} = useContext(BackgroundContext);
+  const mainStyle = `${style.main__container} ${background === "wheat" ? style.wheat : style.corn}`;
 
   return (
     <>

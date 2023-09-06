@@ -5,10 +5,12 @@ export default function TodoTitle({title, isEditing, setTitle}) {
   const inputReference = useRef(null);
 
   useEffect(() => {
-    const end = inputReference.current.value.length;
-    inputReference.current.setSelectionRange(end, end);
-    inputReference.current.focus();
-  }, [isEditing]);
+    if (isEditing) {
+      const end = inputReference.current.value.length;
+      inputReference.current.setSelectionRange(end, end);
+      inputReference.current.focus();
+    };
+  }, [isEditing]); // redo without effect
 
   return (
     <textarea

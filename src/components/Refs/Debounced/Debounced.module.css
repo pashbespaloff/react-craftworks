@@ -1,0 +1,50 @@
+.cookbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-block-start: 5rem;
+  width: 100%;
+  max-width: var(--max-width);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 2rem 1rem;
+  row-gap: 1rem;
+  width: 20rem;
+  list-style-type: none;
+}
+
+.menu li {
+  display: flex;
+  flex-direction: row;
+}
+
+.loader {
+  margin-inline: 1rem;
+  border: 3px solid var(--white-bg);
+  border-top: 3px solid var(--red);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.dish {
+  margin-block: 0 1rem;
+  width: 6rem;
+  height: 2rem;
+}
+
+.dish:hover {
+  color: var(--white);
+  background-color: var(--red);
+}

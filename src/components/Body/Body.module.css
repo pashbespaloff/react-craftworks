@@ -57,7 +57,7 @@ input:focus {
   background-size: cover;
   overflow: scroll;
   scroll-snap-type: y mandatory;
-  transition: background-image 2.51s ease-in-out;
+  transition: background-image 1.5s ease-in-out;
 }
 
 .main__container.wheat {

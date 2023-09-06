@@ -2,6 +2,7 @@ import React from "react";
 import Intro from "../../Intro";
 import State from "../../State";
 import ReducerAndContext from "../../ReducerAndContext";
+import Refs from "../../Refs";
 
 const sections = {
   Intro: { 
@@ -14,7 +15,7 @@ const sections = {
     component: <ReducerAndContext /> 
   },
   Refs: { 
-    component: "Refs" 
+    component: <Refs /> 
   },
   Effect: { 
     component: "Effect" 
