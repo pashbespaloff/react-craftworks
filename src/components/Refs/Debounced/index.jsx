@@ -6,8 +6,10 @@ export default function Debounced() {
   const [dishes, setDishes] = useState(menu);
   const timerRef = useRef(new Array(dishes.length));
 
+  const getDish = (id) => dishes.find(dish => dish.id === id);
+
   const cook = (id) => {
-    const dish = dishes.find(dish => dish.id === id);
+    const dish = getDish(id);
     setDishes([...dishes, dish.isCooking = true]);
     
     clearTimeout(timerRef.current[id]);
@@ -19,7 +21,7 @@ export default function Debounced() {
   };
 
   const stopCooking = (id) => {
-    const dish = dishes.find(dish => dish.id === id);
+    const dish = getDish(id);
     clearTimeout(timerRef.current[id]);
     setDishes([...dishes, dish.isCooking = false]);
   };
