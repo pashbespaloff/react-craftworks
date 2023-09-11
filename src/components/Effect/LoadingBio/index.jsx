@@ -13,7 +13,6 @@ export default function LoadingBio() {
 
   useEffect(() => {
     (async() => {
-      setIsLoading(true);
       const data = await fetchUsers();
       if (data) {
         setUsers(data);
