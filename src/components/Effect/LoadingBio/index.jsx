@@ -20,6 +20,8 @@ export default function LoadingBio() {
         setIsLoading(false);
       };
     })();
+
+    return () => setIsLoading(true);
   }, []);
 
   return (
