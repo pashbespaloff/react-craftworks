@@ -3,12 +3,14 @@ import {fetchBio} from './api';
 import Loader from '../../../ui/Loader';
 import style from "./LoadingBio.module.css";
 
-export default function Bio({activeUser, bio, setBio}) {
+export default function Bio({user, bio, setBio}) {
   useEffect(() => {
     setBio(null);
-    fetchBio(activeUser)
-      .then(activeUserBio => setBio(activeUserBio))
-  }, [activeUser, setBio]);
+    (async() => {
+      const activeUserBio = await fetchBio(user);
+      setBio(activeUserBio);
+    })();
+  }, [user, setBio]);
 
   return (
     <>
