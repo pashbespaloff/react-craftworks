@@ -5,11 +5,15 @@ import style from "./LoadingBio.module.css";
 
 export default function Bio({user, bio, setBio}) {
   useEffect(() => {
+    let ignore = false;
     setBio(null);
+
     (async() => {
       const activeUserBio = await fetchBio(user);
-      setBio(activeUserBio);
+      if (activeUserBio && !ignore) setBio(activeUserBio);
     })();
+
+    return () => ignore = true;
   }, [user, setBio]);
 
   return (
