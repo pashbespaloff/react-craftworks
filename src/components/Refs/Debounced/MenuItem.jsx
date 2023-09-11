@@ -1,5 +1,6 @@
 import React from 'react';
 import style from "./Debounced.module.css";
+import Loader from '../../../ui/Loader';
 
 export default function MenuItem({dish, cook, stopCooking}) {
   return (
@@ -14,7 +15,7 @@ export default function MenuItem({dish, cook, stopCooking}) {
       {
         dish.isCooking && 
         <>
-          <div className={style.loader}></div> 
+          <Loader />
           <button 
             className={style.dish}
             onClick={() => stopCooking(dish.id)}

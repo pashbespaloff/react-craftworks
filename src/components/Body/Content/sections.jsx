@@ -3,8 +3,9 @@ import Intro from "../../Intro";
 import State from "../../State";
 import ReducerAndContext from "../../ReducerAndContext";
 import Refs from "../../Refs";
+import Effect from "../../Effect";
 
-const sections = {
+export const sections = {
   Intro: { 
     component: <Intro /> 
   },
@@ -18,11 +19,9 @@ const sections = {
     component: <Refs /> 
   },
   Effect: { 
-    component: "Effect" 
+    component: <Effect />
   },
   Routing: { 
     component: "Routing" 
   }
 };
-
-export default sections;

@@ -1,0 +1,23 @@
+.biobox {
+  margin-block: 3rem;
+  width: 16rem;
+}
+
+.userlist {
+  margin-block: 1rem;
+  padding-inline-start: .7rem;
+  width: 16rem;
+  height: 2rem;
+  text-align: center;
+}
+
+.userbio {
+  width: 16rem;
+  text-align: center;
+}
+
+.loaderbox {
+  display: flex;
+  justify-content: center;
+  width: 16rem;
+}
