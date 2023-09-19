@@ -1,5 +1,6 @@
 .biobox {
   margin-block: 3rem;
+  margin-inline: auto;
   width: 16rem;
 }
 
