@@ -1,22 +1,9 @@
 import React from 'react';
-import {deleteTodo} from './api';
+// import {deleteTodo} from './api';
 
 export default function TodoButtonsBlock({
-  todoId, setTodos, 
-  isEditing, setIsEditing, 
-  isLoading, setIsLoading, 
-  save
+  isLoading, isEditing, setIsEditing, removeTodo, save
 }) {
-  
-  const removeTodo = async() => {
-    setIsLoading(true);
-    const response = await deleteTodo(todoId);
-    if (response.deleteStatus) {
-      setTodos(prev => prev.filter(t => t.id !== todoId));
-      setIsLoading(false);
-    };
-  };
-
   return (
     <>
       {
@@ -28,7 +15,7 @@ export default function TodoButtonsBlock({
               edit
             </button>
       }
-      <button onClick={() => removeTodo(todoId)} disabled={isLoading}>
+      <button onClick={removeTodo} disabled={isLoading}>
         x
       </button>
     </>

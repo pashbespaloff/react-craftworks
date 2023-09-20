@@ -1,18 +1,17 @@
 import React, {useState} from 'react';
-import {updateTodo} from './api';
+import {updateTodo, deleteTodo} from './api';
 import TodoTitle from './TodoTitle';
 import TodoButtonsBlock from './TodoButtonsBlock';
 
 export default function TodoItem({todo, setTodos}) {
   const [isLoading, setIsLoading] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
-
   const [title, setTitle] = useState(todo.title);
   const [prevTitle, setPrevTitle] = useState(title);
 
-  const updateLocalState = (id, updTodo) => {
+  const updateLocalState = (updTodo) => {
     setTodos(prev => prev.map(todo => {
-      if (todo.id === id) return updTodo;
+      if (todo.id === updTodo.id) return updTodo;
       else return todo;
     }));
   };
@@ -22,7 +21,7 @@ export default function TodoItem({todo, setTodos}) {
     const response = await updateTodo({...changedTodo, completed: !changedTodo.completed});
 
     try {
-      (response.updStatus) && updateLocalState(changedTodo.id, response.updTodo);
+      response.updStatus && updateLocalState(response.updTodo);
     } catch (error) {
       console.log("error: ", error.message);
       return {error};
@@ -38,7 +37,7 @@ export default function TodoItem({todo, setTodos}) {
     try {
       if (response.updStatus) { 
         setPrevTitle(title);
-        updateLocalState(changedTodo.id, response.updTodo);
+        updateLocalState(response.updTodo);
       } else {
         setTitle(prevTitle);
       };
@@ -47,6 +46,15 @@ export default function TodoItem({todo, setTodos}) {
       return {error};
     } finally {
       setIsEditing(false);
+      setIsLoading(false);
+    };
+  };
+
+  const removeTodo = async() => {
+    setIsLoading(true);
+    const response = await deleteTodo(todo.id);
+    if (response.deleteStatus) {
+      setTodos(prev => prev.filter(t => t.id !== todo.id));
       setIsLoading(false);
     };
   };
@@ -68,12 +76,10 @@ export default function TodoItem({todo, setTodos}) {
       />
       
       <TodoButtonsBlock 
-        todoId={todo.id}
-        setTodos={setTodos}
+        isLoading={isLoading}
         isEditing={isEditing}
         setIsEditing={setIsEditing}
-        isLoading={isLoading}
-        setIsLoading={setIsLoading}
+        removeTodo={removeTodo}
         save={() => updateTodoTitle(todo)}
       />
     </li>

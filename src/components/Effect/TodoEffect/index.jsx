@@ -11,9 +11,13 @@ export default function TodoEffect() {
 
   useEffect(() => {
     (async() => {
-      const data = await getTodos();
-      if (data) {
-        setTodos(data);
+      try {
+        const data = await getTodos();
+        data && setTodos(data);
+      } catch (error) {
+        console.log("error: ", error.message);
+        return {error};
+      } finally {
         setIsLoading(false);
       };
     })();

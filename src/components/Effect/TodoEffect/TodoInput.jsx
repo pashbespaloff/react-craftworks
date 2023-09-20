@@ -7,15 +7,22 @@ export default function TodoInput({setTodos}) {
   const [isLoading, setIsLoading] = useState(false);
 
   const add = async() => {
-    if (todo) {
-      setIsLoading(true);
-      const response = await addTodo(todo);
-      if (response.addStatus) setTodos(prev => [...prev, response.newTodo]);
-      setTodo("");
+    try {
+      if (todo) {
+        setIsLoading(true);
+        const response = await addTodo(todo);
+        response.addStatus && setTodos(prev => [...prev, response.newTodo]);
+        setTodo("");
+      } else {
+        console.log("enter a task");
+      };
+
+    } catch (error) {
+      console.log("error: ", error.message);
+      return {error};
+    } finally {
       setIsLoading(false);
-    } else {
-      console.log("enter a task");
-    }
+    };
   };
 
   return (
