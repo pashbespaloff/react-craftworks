@@ -7,7 +7,7 @@ const getTodos = async() => {
     const todos = await response.json();
     return todos;
   } catch (error) {
-    console.log("error: ", error.message);
+    console.log(`error: can't get any tasks (${error.message})`);
     return [];
   };
 };
@@ -29,7 +29,7 @@ const addTodo = async(todoTitle) => {
     const newTodo = await response.json();
     return { addStatus: response.ok, newTodo };
   } catch (error) {
-    console.log("error: ", error.message);
+    console.log(`error: can't add this task (${error.message})`);
     return {error};     
   };
 };
@@ -51,7 +51,7 @@ const updateTodo = async(todo) => {
     const updTodo = await response.json();
     return { updStatus: response.ok, updTodo };
   } catch (error) {
-    console.log("error: ", error.message);
+    console.log(`error: can't update this task (${error.message})`);
     return {error}; 
   };
 };
@@ -63,7 +63,7 @@ const deleteTodo = async(todoId) => {
     });
     return { deleteStatus: response.ok };
   } catch (error) {
-    console.log("error: ", error.message);
+    console.log("error: can't delete this task" + error.message);
     return {error};     
   };
 };

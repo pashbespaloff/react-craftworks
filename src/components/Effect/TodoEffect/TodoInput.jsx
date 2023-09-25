@@ -18,7 +18,6 @@ export default function TodoInput({setTodos}) {
       };
 
     } catch (error) {
-      console.log("error: ", error.message);
       return {error};
     } finally {
       setIsLoading(false);
@@ -28,10 +27,7 @@ export default function TodoInput({setTodos}) {
   return (
     <div className={style.add}>
       <input value={todo} onChange={(e) => setTodo(e.target.value)} />
-      <button 
-        disabled={isLoading}
-        onClick={add}
-      >
+      <button disabled={isLoading} onClick={add}>
         add
       </button>
     </div>

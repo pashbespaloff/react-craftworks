@@ -23,7 +23,6 @@ export default function TodoItem({todo, setTodos}) {
     try {
       response.updStatus && updateLocalState(response.updTodo);
     } catch (error) {
-      console.log("error: ", error.message);
       return {error};
     } finally {
       setIsLoading(false);
@@ -42,7 +41,6 @@ export default function TodoItem({todo, setTodos}) {
         setTitle(prevTitle);
       };
     } catch (error) {
-      console.log("error: ", error.message);
       return {error};
     } finally {
       setIsEditing(false);

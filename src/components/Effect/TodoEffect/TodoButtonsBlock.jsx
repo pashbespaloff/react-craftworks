@@ -1,5 +1,4 @@
 import React from 'react';
-// import {deleteTodo} from './api';
 
 export default function TodoButtonsBlock({
   isLoading, isEditing, setIsEditing, removeTodo, save
