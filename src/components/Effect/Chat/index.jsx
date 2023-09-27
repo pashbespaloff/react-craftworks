@@ -13,9 +13,9 @@ export default function Chat() {
 
   const handleThemeSwitch = () => setTheme(prev => prev === "dark" ? "light" : "dark");
   const handleEncryptionSwitch = () => setEncryption(prev => !prev);
-  
+
   useChatConnection(activeChatRoom, isEncrypted);
-  useNotifications(theme);
+  useNotifications(activeChatRoom, theme);
 
   return (
     <>

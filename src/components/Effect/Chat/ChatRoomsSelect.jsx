@@ -1,7 +1,7 @@
 import React from 'react';
 import {chatRooms} from "./chatRooms";
-import Text from './Text';
 import style from "./Chat.module.css";
+
 
 export default function ChatRoomsSelect({setActiveChatRoom}) {
   return (

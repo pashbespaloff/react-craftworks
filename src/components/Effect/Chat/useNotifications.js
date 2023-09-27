@@ -3,13 +3,13 @@ import {showNotification} from './notifications';
 import useEffectEvent from '../../helpers/useEffectEventHook';
 import getRandomMessage from './getRandomMessage';
 
-export default function useNotifications(theme) {
+export default function useNotifications(room, theme) {
   const onCall = useEffectEvent((msg) => {
     showNotification(msg, theme);
   });
 
   useEffect(() => {
-    const intervalId = setInterval(() => onCall(getRandomMessage()), 3000);
+    const intervalId = setInterval(() => onCall(getRandomMessage(room)), 3000);
     return () => clearInterval(intervalId);
-  }, [onCall]);
+  }, [onCall, room]);
 };
