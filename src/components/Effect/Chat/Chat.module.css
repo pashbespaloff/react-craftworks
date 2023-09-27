@@ -1,0 +1,30 @@
+.chatbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-block: 2rem 0;
+  margin-inline: auto;
+  width: 100%;
+  max-width: var(--max-width);
+}
+
+.switchbox,
+.text,
+.select {
+  margin-block: .5rem;
+}
+
+.switchbox:first-of-type {
+  margin-block-start: 1rem;
+}
+
+.checkbox {
+  margin-inline-end: .25rem;
+}
+
+.select {
+  width: 12rem;
+  height: 2rem;
+  text-align: center;
+}

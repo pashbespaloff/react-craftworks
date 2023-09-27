@@ -1,0 +1,1 @@
+export const chatRooms = ["general", "travel", "music"];
