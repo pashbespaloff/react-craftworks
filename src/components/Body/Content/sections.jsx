@@ -4,6 +4,7 @@ import State from "../../State";
 import ReducerAndContext from "../../ReducerAndContext";
 import Refs from "../../Refs";
 import Effect from "../../Effect";
+import Routing from "../../Routing";
 
 export const sections = {
   Intro: { 
@@ -22,6 +23,6 @@ export const sections = {
     component: <Effect />
   },
   Routing: { 
-    component: "Routing" 
+    component: <Routing /> 
   }
 };
