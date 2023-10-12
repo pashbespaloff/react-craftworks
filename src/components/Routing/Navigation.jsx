@@ -16,7 +16,7 @@ export default function Navigation({isLoggedIn, setLogin}) {
     if (isLoggedIn) {
       setLogin(false);
       alert("you are logged out");
-      navigate("../");
+      navigate("/react-craftworks");
     }
   };
 
