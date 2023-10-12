@@ -6,8 +6,8 @@ import SecretPage from './SecretPage';
 export default function RoutingRoot() {
   return (
     <Routes>
-      <Route path="/public" element={<PublicPage />} />
-      <Route path="/secret" element={<SecretPage />} />
+      <Route path="/react-craftworks/public" element={<PublicPage />} />
+      <Route path="/react-craftworks/secret" element={<SecretPage />} />
     </Routes>
   )
 };

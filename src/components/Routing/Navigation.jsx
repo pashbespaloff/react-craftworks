@@ -24,11 +24,11 @@ export default function Navigation({isLoggedIn, setLogin}) {
     <>
       <ul className={style.linklist}>
         <li className={style.link}>
-          <Link to="/public">cake recipe</Link>
+          <Link to="/react-craftworks/public">cake recipe</Link>
         </li>
         {isLoggedIn &&
           <li className={style.link}>
-            <Link to="/secret">methedrone recipe</Link>
+            <Link to="/react-craftworks/secret">methedrone recipe</Link>
           </li>
         }
       </ul>
